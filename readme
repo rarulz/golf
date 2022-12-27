@@ -1,0 +1,9 @@
+echo "# golf" >> README.md
+git init
+git add README.md
+git commit -m "This program will first prompt the user to enter the name of the golfer, and then it will ask them to input the date and location of their round, as well as the number of holes played and their total score. It will then calculate and print the score for each hole, as well as the total score and average score for the round.
+In addition, it will use the matplotlib library to plot the average scores for the golfer over time. The x-axis represents the round number, and the y-axis represents the average score. The program will display the plot using the show() function.
+"
+git branch -M main
+git remote add origin https://github.com/rarulz/golf.git
+git push -u origin main
