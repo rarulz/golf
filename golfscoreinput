@@ -1,0 +1,40 @@
+import matplotlib.pyplot as plt
+
+# Initialize variables to track the scores
+scores = []
+total_score = 0
+averages = []
+
+# Prompt the user to input the name of the golfer
+name = input("Enter the name of the golfer: ")
+
+# Prompt the user to input the date and location of the round
+date = input("Enter the date of the round (e.g. 01/01/2022): ")
+location = input("Enter the location of the round (e.g. Oak Hill Country Club): ")
+
+# Prompt the user to input the number of holes played and the total score
+num_holes = int(input("Enter the number of holes played: "))
+total_score = int(input("Enter the total score: "))
+
+# Calculate the scores for each hole
+for hole in range(1, num_holes + 1):
+  score = total_score / num_holes
+  scores.append(score)
+
+# Calculate the average score for the round
+average = total_score / num_holes
+averages.append(average)
+
+# Plot the average scores over time
+plt.plot(averages)
+plt.xlabel("Round")
+plt.ylabel("Average Score")
+plt.title("Average Scores for " + name)
+plt.show()
+
+# Print the name, date, location, scores, and total score
+print("Golfer:", name)
+print("Date:", date)
+print("Location:", location)
+print("Scores:", scores)
+print("Total score:", total_score)
